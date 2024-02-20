@@ -1,0 +1,73 @@
+%A%- a kahi pe ho
+%A- a last
+distinct search row duplicate search
+
+
+
+
+
+create database satyam10;
+create table sk(
+id int primary key,
+name varchar(50),
+address varchar(80)
+);
+select * from sk
+insert into sk values(1,'skk','patna')
+insert into sk values(2,'skk','begusarai')
+insert into sk values(3,'skk','dharbhanga')
+insert into sk(id,name) values(4,'skk')
+
+
+
+create database W3schools
+select* from customers
+select * from customers where country ='Sweden' OR country='UK' OR country='France'
+select * from customers where country in('Swedan','UK','France','Germany') 
+select * from customers where country in('Swedan','UK','France','Germany') and CustomerName like 'A%'
+select * from customers where country in('Swedan','UK','France','Germany') and CustomerName like '_A%'
+select * from customers where country in('Swedan','UK','France','Germany') and CustomerName like '%A'
+
+select * from customers where not country in('Swedan','UK','France','Germany')
+select distinct * from customers
+select distinct (country) from customers
+select top(5) * from customers
+select  * from customers order by country desc,city asc
+update customers set CustomerName='Alfred Futterkiste' where CustomerID =1
+delete from customers where customerID=91
+truncate table customers
+select * from products
+select min(price) as 'min price' from products
+select ProductName, min(price) as 'min price' from products group by ProductName
+
+create table student(
+id int
+sname varchar(30)
+add varchar(30)
+);
+insert into values(1,sk,patna)
+insert into values(2,vk,patna)
+insert into values(3,rk,satna)
+insert into values(4,tk,dharbhanga)
+insert into values(5,fk,begusrai)
+
+
+
+select * from student 
+inner join class
+on student.id=class.id
+
+select student.id,sname,add,class.id,class,section from student
+inner join class
+on student.id=class.id
+
+
+select * from student as student
+left join as class
+on student.id=class.id
+
+
+select * from student as s1, student  as s2 
+
+
+
