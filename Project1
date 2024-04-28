@@ -1,0 +1,17 @@
+import requests
+from bs4 import BeautifulSoup
+
+# URL of the website to scrape
+url = "https://dharani.telangana.gov.in/knowLandStatus"
+
+# Send an HTTP GET request to the website
+response = requests.get(url)
+
+# Parse the HTML code using BeautifulSoup
+soup = BeautifulSoup(response.content, 'html.parser')
+for district in soup.find_all("select", id="districtID"):
+    print(district.text.strip())
+    for mandal in soup.find_all("select", id="mandalID"):
+        print(mandal.text)
+        for village in soup.find_all("select", id="villageId"):
+            print(village.text)
